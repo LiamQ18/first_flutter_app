@@ -1,5 +1,38 @@
 import 'package:flutter/material.dart';
 
+void main() => runApp(new MaterialApp(home: new MyApp(),));
+
+class MyApp extends StatefulWidget{
+  @override
+  MyAppState createState() => new MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+      centerTitle: true,  
+        
+      title: new Text('data'),
+      ),
+      body: new Container(
+        child: new Column(
+          children: <Widget>[
+            new Text('cjbcdjcbjk', style: new TextStyle(fontSize: 20.0, color: Colors.blue, 
+            fontStyle: FontStyle.italic, fontWeight: FontWeight.bold)),
+          ],
+        )
+      ),
+    );
+}
+}
+
+
+
+
+//Below is used for guidance...
+/*
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -106,4 +139,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
-}
+} */
