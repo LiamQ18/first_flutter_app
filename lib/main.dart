@@ -13,18 +13,51 @@ class MyAppState extends State<MyApp> {
     return new Scaffold(
       appBar: new AppBar(
       centerTitle: true,  
-        
-      title: new Text('data'),
+      title: new Text('Big Boy Header',style:TextStyle( fontSize: 40.0)),
       ),
-      body: new Container(
-        child: new Column(
+      
+      body: new  Container(
+        color: Colors.lightBlue,
+          child: new Column(
+
+             crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            new Text('cjbcdjcbjk', style: new TextStyle(fontSize: 20.0, color: Colors.blue, 
-            fontStyle: FontStyle.italic, fontWeight: FontWeight.bold)),
-          ],
-        )
+            new Padding(padding: new EdgeInsets.all(30.0)
+            ),
+            new RaisedButton(
+              padding: EdgeInsets.symmetric( vertical: 16.0),
+             child: new Text('Yes', textAlign: TextAlign.center, 
+             style: new TextStyle( fontSize: 30.0, color: Colors.green, fontWeight: FontWeight.bold),
+             ),
+              highlightColor: Colors.yellow,
+          ),
+            new Padding(
+              padding: new EdgeInsets.all(60.0),
+            ),
+             
+            new Center(
+              child: new Text('Click one!', textAlign: TextAlign.center, 
+              style: new TextStyle(fontSize: 40.0, color: Colors.white, 
+            fontStyle: FontStyle.italic,  fontWeight: FontWeight.bold)),
+            ),
+            
+          new Padding(
+              padding: new EdgeInsets.all(60.0),
+            ),
+
+          new RaisedButton(
+
+             padding: EdgeInsets.symmetric(vertical: 16.0),
+             child: new Text('No', textAlign: TextAlign.center, 
+             style: new TextStyle( fontSize: 30.0, color: Colors.green, fontWeight: FontWeight.bold),
+             ),
+              highlightColor: Colors.yellow,
+          )
+           ],
+         ),
+          
       ),
-    );
+        );
 }
 }
 
