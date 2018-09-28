@@ -4,16 +4,17 @@ void main() => runApp(new MaterialApp(home: new MyApp(),));
 
 class MyApp extends StatefulWidget{
   @override
-  MyAppState createState() => new MyAppState();
-
-  
+  MyAppState createState() => new MyAppState(); 
 }
 void _yesButton() {
      print('yes');
   }
 void _noButton() {
   print('no');
+   //Navigator.push(context, route)
+   //);
 }
+
 
 class MyAppState extends State<MyApp> {
   @override
@@ -39,6 +40,7 @@ class MyAppState extends State<MyApp> {
              ),
               highlightColor: Colors.yellow,  
                onPressed: _yesButton,
+               splashColor: Colors.redAccent,
           ),
             new Padding(
               padding: new EdgeInsets.all(60.0),
@@ -62,14 +64,25 @@ class MyAppState extends State<MyApp> {
              ),
               highlightColor: Colors.yellow,
               onPressed: _noButton,
-              
+               splashColor: Colors. redAccent,
           )
            ],
-         ),
-          
-      ),
-        );
+         ), 
+           
+      ), 
+        ); 
 }
+}
+class SecondScreen extends StatelessWidget {
+  @override
+  Widget build (BuildContext ctxt) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Multi Page Application Page-1"),
+      ),
+      body: new Text("Another Page...!!!!!!"),
+    );
+  }
 }
 
 
