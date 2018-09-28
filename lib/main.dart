@@ -5,6 +5,14 @@ void main() => runApp(new MaterialApp(home: new MyApp(),));
 class MyApp extends StatefulWidget{
   @override
   MyAppState createState() => new MyAppState();
+
+  
+}
+void _yesButton() {
+     print('yes');
+  }
+void _noButton() {
+  print('no');
 }
 
 class MyAppState extends State<MyApp> {
@@ -29,7 +37,8 @@ class MyAppState extends State<MyApp> {
              child: new Text('Yes', textAlign: TextAlign.center, 
              style: new TextStyle( fontSize: 30.0, color: Colors.green, fontWeight: FontWeight.bold),
              ),
-              highlightColor: Colors.yellow,
+              highlightColor: Colors.yellow,  
+               onPressed: _yesButton,
           ),
             new Padding(
               padding: new EdgeInsets.all(60.0),
@@ -40,7 +49,7 @@ class MyAppState extends State<MyApp> {
               style: new TextStyle(fontSize: 40.0, color: Colors.white, 
             fontStyle: FontStyle.italic,  fontWeight: FontWeight.bold)),
             ),
-            
+
           new Padding(
               padding: new EdgeInsets.all(60.0),
             ),
@@ -52,6 +61,7 @@ class MyAppState extends State<MyApp> {
              style: new TextStyle( fontSize: 30.0, color: Colors.green, fontWeight: FontWeight.bold),
              ),
               highlightColor: Colors.yellow,
+              onPressed: _noButton,
           )
            ],
          ),
