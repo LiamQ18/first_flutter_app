@@ -6,15 +6,6 @@ class MyApp extends StatefulWidget{
   @override
   MyAppState createState() => new MyAppState(); 
 }
-void _yesButton() {
-     print('yes');
-  }
-void _noButton() {
-  print('no');
-   //Navigator.push(context, route)
-   //);
-}
-
 
 class MyAppState extends State<MyApp> {
   @override
@@ -74,9 +65,7 @@ class MyAppState extends State<MyApp> {
                  Navigator.push(context, 
                  new MaterialPageRoute( builder: (context)=> new NoScreen())
                  );
-              }
-               
-               
+              } 
           )
            ],
          ), 
@@ -100,7 +89,7 @@ class NoScreen extends StatelessWidget {
           children: <Widget>[
             new Padding(padding: new EdgeInsets.all(30.0)
             ),
- 
+            
             new Center(
               child: new Text('NoNoNo', textAlign: TextAlign.center, 
               style: new TextStyle(fontSize: 40.0, color: Colors.white, 
